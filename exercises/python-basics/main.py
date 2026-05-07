@@ -114,3 +114,76 @@ print("line")  # Output: Same line
 # Use sep= to change the separator between arguments (default is a space)
 print("Winnipeg", "Manitoba", "Canada", sep=", ")
 # Output: Winnipeg, Manitoba, Canada
+
+# =============================================================================
+# STRINGS
+# =============================================================================
+
+# Strings are sequences of character(s) enclosed in quotes
+
+# Example of strings
+greeting = "Hello"
+name = 'Alice'
+letter = "A"
+
+# String can be used with various operations
+# Concatenation (joining strings)
+full_greeting = greeting + ", " + name + "!"
+print(full_greeting)  # Output: Hello, Alice!
+
+# Repetition
+echo = "Echo! " * 3
+print(echo)  # Output: Echo! Echo! Echo!
+
+# String indexing (accessing individual characters)
+first_letter = name[0]  # 'A' (indexing starts at 0)
+last_letter = name[-1]  # 'e' (negative indexing starts from the end)
+
+# Slicing (extracting a substring)
+sub_name = name[1:4]  # 'lic' (from index 1 to 3)
+sub_greeting = greeting[:3]  # 'Hel' (from start to index 2)
+
+# String methods (built-in functions for strings)
+upper_greeting = greeting.upper()  # 'HELLO'
+lower_name = name.lower()          # 'alice'
+title_name = name.title()          # 'Alice'
+
+# f-strings (formatted string literals) for embedding expressions
+age_next_year = age + 1
+print(f"Next year, I will be {age_next_year} years old.")
+# Output: Next year, I will be 32 years old.
+
+# String formatting with format() method
+formatted_greeting = "Hello, {}. You are {} years old.".format(name, age)
+print(formatted_greeting)  # Output: Hello, Alice. You are 31 years old.
+
+# String formatting with % operator (older style)
+percent_greeting = "Hello, %s. You are %d years old." % (name, age)
+print(percent_greeting)  # Output: Hello, Alice. You are 31 years old.
+
+# Triple quotes for multi-line strings
+multi_line = """This is a
+multi-line string."""
+print(multi_line)
+# Output:
+# This is a
+# multi-line string.
+
+# Escape characters for special characters in strings
+quote = "She said, \"Hello!\""  # Use backslash to escape double quotes
+print(quote)  # Output: She said, "Hello!"
+
+# Raw strings to ignore escape characters (useful for file paths)
+raw_path = r"C:\Users\Phillip\Documents"
+print(raw_path)  # Output: C:\Users\Phillip\Documents
+
+# String concatenation with variables
+first_name = "Phillip"
+last_name = "Bridgeman"
+full_name = first_name + " " + last_name
+print(full_name)  # Output: Phillip Bridgeman
+
+# String interpolation with f-strings
+age = 31
+print(f"My name is {full_name} and I am {age} years old.")
+# Output: My name is Phillip Bridgeman and I am 31 years old.
